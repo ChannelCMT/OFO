@@ -1,0 +1,116 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>content</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Channel_CMT</th>
+      <td>ML_Install_Error</td>
+      <td>jaqs: pip install git+https://github.com/xingetouzi/jaqs-fxdayu.git@localds pip: python -m pip install pip==9.0.1 python -m pip install pip==9.0.1 -i https://pypi.douban.com/simple rqalpha: pip install rqalpha==3.0.9 pip install rqalpha==3.0.9 -i https://pypi.douban.com/simple</td>
+    </tr>
+    <tr>
+      <th>Channel_CMT</th>
+      <td>实现简单的统计套利策略模板</td>
+      <td>简单配对交易策略逻辑  配对交易即是考察两个品种之间的价格差，在假定价格差是平稳序列的情况下，当观测到价格差往某一个方向偏离时反向操作。  ## 第一步，通过tick数据得到两个品种的价格：  使用tick数据合成品种10s，1min，5min等的bar数据，获得品种历史价格序列  ## 第二步，计算品种的价格差和beta：  最简单的做法是使用两个品种的价格直接做差，在得到的序列不平稳的情况下也会选择先分别计算两个品种的收益率（或对数收益率），再将收益率做差。  因为各式各样的原因，两个品种的价格差有可能均值不为0，所以在获得价格差序列时会引入beta，即： 品种1的价格 - beta * 品种2的价格 = 价差  ## 第三步，通过价格差计算合理方差：  计算合理方差有几种办法，最简单的是选择直接计算价差序列的标准差，将估计的标准差作为未来一段时间内真实的标准差。  ## 第四步，通过标准差进行交易。  假定价差是由品种1-beta份品种2得到的，当价差向上突破给定倍数的标准差时（默认为2倍），可以认为价差在未来有很大概率回归，此时做空品种1，做多beta份品种2，待价差回归到0时平仓。价差向下突破给定倍数的标准差时反之。</td>
+    </tr>
+    <tr>
+      <th>Channel_CMT</th>
+      <td>Tick数据跨平台价差交易</td>
+      <td>提供了biance/huobip/bitfinex的三天Tick数据。 需要监控btc.ustd的Tick在不同平台间的价差，当价差大于100美金时进行套利交易，并持有至价差在10美金平仓。  问题1： Tick数据怎么按照时间监控，成交是在什么档进行撮合？ 问题2： 如何对Tick进行价差计算，并针对价差编写策略？ 问题3： 如何对价差策略进行合理回测？</td>
+    </tr>
+    <tr>
+      <th>Channel_CMT</th>
+      <td>activeSymbol下单的Bug</td>
+      <td>1. 在OnTick方法下面的activeSymbol无法下单？ ![TickActiveSymbol.png](/media/spirit/images/11/28463a4a25d8f4674179b2da0cba1d06.png)  2. 把activeSymbol的下单条件改到OnTrade方法下没有执行？这个没有报错，就是没有输出。 ![TradeActiveSymbol.png](/media/spirit/images/11/6dec5fecb82c9ad936a11ed333aacfb5.png)</td>
+    </tr>
+    <tr>
+      <th>Channel_CMT</th>
+      <td>讲师筛选</td>
+      <td>自己准备一个千聊直播间，开一个直播，把PPT图片弄上去  1.5分钟介绍高中的Python基础你觉得要怎么教 2.10-15分钟讲一个知识点，IC与Quantile， 或者， Distribution与Probability 3.发给Channel审听，随后会有点评与是否录取的通知 4.通过后需要安排三个半小时内容，有讲师费与当周包住宿   DDL: 6.16，没收到的人自动放弃 Channel</td>
+    </tr>
+    <tr>
+      <th>Channel_CMT</th>
+      <td>因子复现相关链接</td>
+      <td>Spearman数据：https://pan.baidu.com/s/1-kY1N-amuaI0QX61nKJelg 一起来复现： https://yiqixie.com/s/home/fcABFN7VGo00k_IqTbyRtL5WA Github地址: https://github.com/ChannelCMT/HelloGit</td>
+    </tr>
+    <tr>
+      <th>bruce</th>
+      <td>测试文件JAQS报错(Mac)</td>
+      <td>![D9BFD015-926C-4449-BA1D-D981057C3F29.png](/media/spirit/images/47/eef1aa308f298af547536fbda9d9b5fc_w1zJWFA.png)</td>
+    </tr>
+    <tr>
+      <th>bruce</th>
+      <td>白银问题四</td>
+      <td>我尝试着读出文件里面的所有股票（共50），然后把他们转为list，但是当我把它loop进去字典的时候就出现了问题  题目： ![Q4.png](/media/spirit/images/47/bb315089d716c827cace9229fd0c6709.png)  代码： ![4.png](/media/spirit/images/47/c377488b567322b5154401d0ea327b3d.png)</td>
+    </tr>
+    <tr>
+      <th>bruce</th>
+      <td>白银问题三</td>
+      <td>用talib计算600036的10日均线值，将MA的ndarray数据格式转换成Series格式后，用Matplotlib展示，为什么出来的图片是少了很多数据？ 题目： ![Q2-3.png](/media/spirit/images/47/c26a1b545b89682ed4518f504742bc4e_TaxLWeI.png) 问题： ![A2-3.png](/media/spirit/images/47/e82ee9394655c01d1d984abbe3b6d36c.png)</td>
+    </tr>
+    <tr>
+      <th>leon</th>
+      <td>MultipleRegression</td>
+      <td>https://github.com/leon-ye/fxdayu_tool/blob/master/multiple_regression.py 文件中包含了多元回归的函数</td>
+    </tr>
+    <tr>
+      <th>ukamoy</th>
+      <td>多因子任务优秀学员模板</td>
+      <td>张华鸿同学的Git地址 https://github.com/ZHHHHZ/Git-ZHH</td>
+    </tr>
+    <tr>
+      <th>ukamoy</th>
+      <td>因子脚本规范说明</td>
+      <td>## **1. 获取指数：** 因为因子入库时全部使用本地数据，因而需要用以下代码来获取benchmark： zz800_benchmark, msg = dv.data_api.daily("000906.SH",dv.extended_start_date_d,dv.end_date,fields='trade_date,close,open') dv.data_benchmark=zz800_benchmark[['trade_date','close','open']].set_index('trade_date')  ##**2.添加字段：** 为了防止因为字段未加载而无法计算的问题，除了开高低收成交量外，请使用dv.add_field把他们添加进dataview里。 例如：dv.add_field('net_profit')  ##**3. 有使用库的需要把库import 进去** 例如使用numpy、pandas来计算因子， 需要import numpy  import pandas  ##**4.不可以直接把其他因子add_field到dv ** 暂时还不开放直接调取其他因子的功能给用户。所以若要使用到其他因子计算，需要将计算其他因子的公式列进去。  ##**5. 关于复权价的使用** 如果因子计算的时间周期较长，使用close_adj得出的结果比较准确。短周期不使用close_adj  ##** 6.参数和因子描述信息尽量完整** 参数和因子描述对用户的使用帮助很大，有的学员图省事，都没有填写，这是不提倡的。  ## **7.脚本因子命名遵循之前的作法，复现的在原因子名称后接 _J ，脚本文件名使用提供的相对应的大鱼编号。**  ##**8脚本测试** 需要使用这篇帖子的检测脚本检测，安装和检测说明请移步帖子 http://bbs.fxdayu.com/topic/25/%E5%9B%A0%E5%AD%90%E8%84%9A%E6%9C%AC%E8%AE%BE%E8%AE%A1%E6%9B%B4%E6%96%B0%E8%A6%81%E6%B1%82/#c1</td>
+    </tr>
+    <tr>
+      <th>xinge</th>
+      <td>多因子成绩排名公布</td>
+      <td>**多因子排名** 张彦麟 录取 95 张华鸿 录取 95 张安翔 录取 90 宋伦 录取 90 陈栩淦 录取 90 孙国铭 通过 80 于佳佳 通过 80 鲁思丞 通过 80 叶梁 通过 80 谢政航 通过 80 熊弗 通过 80 吴欣亭 通过 80  李乾 待定 70 顾俊伦 待定 70 黄嘉豪 待定 70 陈相杰 待定 70 黄媛 待定 70 林鸿 待定 70 曾星宇 待定 70 谢昊 待定 70    黎梓勇 做多很差,夏普不及格 59 陈杰 做多很差,夏普不及格 59 谭红叶 做多很差,夏普不及格 59 查玥 IC表现不及格 59 刘君惠 IC表现不及格 59 丁湛镭 IC表现不及格 59 罗晓牧 IC表现不及格 59 岑萧萍 IC表现不及格 59   **提前录取5位，7位通过，5位待定。** 10位不通过的同学，首先我代表大鱼感谢大家付出时间做多因子的研发，大鱼会邮寄纸质版实习证书与赠送一件GitHub的T-Shirt，请大家跟小车报自己的身高，165-S，170-M，175-L，180-XL，185XXL。 没有做多因子但完成复现的可以获得电子版的云实习证书。 接下来会安排18位同学的工作，如果有人中途没完成或者放弃，待定可以替换获取实地实习名额。 有问题可以联系黄翰琪同事 hanqi.huang@fxdayu.com</td>
+    </tr>
+    <tr>
+      <th>xinge</th>
+      <td>rqalpha报错</td>
+      <td>**bcolz需要安装1.1.2** bcolz1.1.2_wheel百度云盘链接: https://pan.baidu.com/s/12tPMpaPc0LN3sRbIJtMJrQ **rqalpha版本需要3.0.9** pip install rqalpha==3.0.9</td>
+    </tr>
+    <tr>
+      <th>xinge</th>
+      <td>安装gitlab的vnpy_fxdayu</td>
+      <td>有好几个Syntax报错，不清楚是什么问题！![SyntaxError.png](/media/spirit/images/2/558f150a46d396cb153461415ffc033a.png)</td>
+    </tr>
+    <tr>
+      <th>xinge</th>
+      <td>TimingDigger信号挖掘</td>
+      <td>HFDataView与Timedigger使用案例：https://github.com/ChannelCMT/HelloGit 数据与初步研究案例： https://pan.baidu.com/s/1IC5z9jyPwGJREFwb6GGpsg 一起来假设： https://yiqixie.com/s/home/fcAC7HpVKS7B5MMqYi9GHAESf  实习生这个月有时间就可以做信号挖掘，熟悉量化策略的生成流程。</td>
+    </tr>
+    <tr>
+      <th>zongzong</th>
+      <td>引擎使用问题</td>
+      <td>各位在vnpy_fxdayu的引擎使用过程中遇到问题可以在这里提出，我们会第一时间反馈。  祝好</td>
+    </tr>
+    <tr>
+      <th>叶蓝山</th>
+      <td>SUOI因子复现的问题</td>
+      <td>![SUOI.jpg](/media/spirit/images/19/d162b7e9a97b98f2c7c0b010989c4da1.jpeg) 未找到将日/季度数据转换为年度数据的函数，且要求中未指明年度数据的取值标准，不知如何复现，请老师指正，非常感谢！</td>
+    </tr>
+    <tr>
+      <th>吴欣亭</th>
+      <td>Arraymanager ts_argmax</td>
+      <td>![290DF0E5-6DCF-4881-AB05-5978A99CD551.png](/media/spirit/images/59/b572dc3057b97f6f197fd9314ea1b44f.png)![D3C70FA2-4706-47E0-AD5D-BE3D9059B660.png](/media/spirit/images/59/452ca39e5376a1d99fb2d611b4d846ee_N7bRTkS.png)</td>
+    </tr>
+    <tr>
+      <th>高山根</th>
+      <td>不报错也不运行</td>
+      <td>这个即使time span很短了也不运行。。应该不是电脑的原因了 ![捕获1.jpg](/media/spirit/images/69/7861d23bf979466a5e92ec5c93e42783.jpeg)</td>
+    </tr>
+  </tbody>
+</table>
